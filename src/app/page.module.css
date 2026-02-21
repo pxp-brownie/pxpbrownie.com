@@ -470,6 +470,102 @@
 }
 
 /* ==========================================================================
+   Project Detail View
+   ========================================================================== */
+.projectDetailMain {
+    flex: 1;
+    overflow-y: auto;
+    padding: 3rem;
+    background-color: var(--color-gray-50);
+}
+
+.projectDetailContent {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-red-800);
+    font-family: var(--font-b612-mono), monospace;
+    font-size: 0.75rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.backButton:hover {
+    opacity: 0.7;
+}
+
+.projectDetailHero {
+    margin-bottom: 3rem;
+}
+
+.detailHeroImage {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.detailTitle {
+    color: var(--color-red-800);
+    font-family: "Overused Grotesk", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.detailTags {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.detailTag {
+    font-family: var(--font-b612-mono), monospace;
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    border: 1px solid var(--color-gray-200);
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.projectBody {
+    color: var(--color-gray-700);
+    font-family: "Overused Grotesk", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+}
+
+.projectBody p {
+    margin-bottom: 1.5rem;
+}
+
+.projectExternalLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-red-800);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.projectExternalLink:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
    5. Mobile Menu Overlay
    ========================================================================== */
 .mobileMenu {

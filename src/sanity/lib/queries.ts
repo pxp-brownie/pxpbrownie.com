@@ -24,3 +24,14 @@ export const socialsQuery = groq`*[_type == "social"] {
   platform,
   url
 }`
+
+export const projectBySlugQuery = groq`*[_type == "project" && slug.current == $slug][0] {
+  _id,
+  title,
+  "slug": slug.current,
+  mainImage,
+  categories,
+  publishedAt,
+  body,
+  link
+}`
