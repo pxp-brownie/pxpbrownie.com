@@ -48,5 +48,18 @@ export default defineType({
             title: 'Project Link',
             type: 'url',
         }),
+        defineField({
+            name: 'isCaseStudy',
+            title: 'Is Case Study?',
+            type: 'boolean',
+            initialValue: false,
+        }),
+        defineField({
+            name: 'caseStudyBody',
+            title: 'Case Study Body',
+            type: 'array',
+            of: [{ type: 'block' }],
+            hidden: ({ document }) => !document?.isCaseStudy,
+        }),
     ],
 })

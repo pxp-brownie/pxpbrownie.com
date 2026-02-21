@@ -689,6 +689,68 @@
     line-height: 1.4;
 }
 
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+}
+
+.aboutProfileImage {
+    width: 100%;
+    border-radius: 20px;
+    aspect-ratio: 1/1.2;
+    object-fit: cover;
+    margin-bottom: 2.5rem;
+}
+
+.sidebarHeading {
+    font-family: var(--font-b612-mono), monospace;
+    font-size: 0.75rem;
+    color: var(--color-red-800);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(138, 25, 23, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.skillsSection {
+    margin-bottom: 3rem;
+}
+
+.skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experienceItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.expRole {
+    font-weight: 700;
+    color: var(--color-gray-800);
+}
+
+.expCompany {
+    font-size: 0.95rem;
+    color: var(--color-gray-500);
+}
+
+.expDuration {
+    font-size: 0.75rem;
+    font-family: var(--font-b612-mono), monospace;
+    color: var(--color-gray-400);
+    margin-top: 0.25rem;
+}
+
 .mobileMenu {
     position: fixed;
     top: 0;
@@ -900,5 +962,53 @@
         flex: 1;
         padding: 1.5rem;
         /* Increased (+8px) */
+    }
+
+    .showcaseGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .projectCard {
+        aspect-ratio: 16 / 10;
+    }
+
+    .projectOverlay {
+        opacity: 1;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+    }
+
+    /* Secondary Pages Mobile */
+    .secondaryMain {
+        padding: 3rem 1.5rem;
+    }
+
+    .secondaryTitle {
+        font-size: 2.5rem;
+    }
+
+    .secondarySubtitle {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+
+    .aboutGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .aboutSidebar {
+        order: -1;
+    }
+
+    .aboutProfileImage {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .serviceCards {
+        grid-template-columns: 1fr;
     }
 }

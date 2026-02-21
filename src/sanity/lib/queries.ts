@@ -52,3 +52,24 @@ export const servicesQuery = groq`*[_type == "services"][0] {
   ctaText,
   ctaLink
 }`
+
+export const aboutQuery = groq`*[_type == "about"][0] {
+  _id,
+  title,
+  headline,
+  mainImage,
+  story,
+  skills,
+  experience
+}`
+
+export const caseStudiesQuery = groq`*[_type == "project" && isCaseStudy == true] | order(publishedAt desc) {
+  _id,
+  title,
+  "slug": slug.current,
+  mainImage,
+  categories,
+  publishedAt,
+  body,
+  link
+}`
