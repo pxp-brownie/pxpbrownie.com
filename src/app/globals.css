@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  /* Colors from Figma */
+  --color-blue-900: #074f56;
+  --color-red-800: #c02927;
+  --color-gray-600: #707070;
+  --color-gray-400: #b8b8b8;
+  --color-green-500: #31938a;
+  --color-gray-100: #f3f3f3;
+  --color-gray-50: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-600);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
