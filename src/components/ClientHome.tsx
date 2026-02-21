@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "../app/page.module.css";
 import { Project, Bio, Social } from "../types";
+import Link from "next/link";
 
 import ProjectCard from "./ProjectCard";
 
@@ -62,11 +63,11 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                 </div>
                 <div className={styles.headerRight}>
                     <nav className={styles.navLinks}>
-                        <span className={styles.navLink}>ABOUT</span>
-                        <span className={styles.navLink}>CASE STUDIES</span>
-                        <span className={styles.navLink}>PROJECTS</span>
-                        <span className={styles.navLink}>IMPOSSIBLE LIST</span>
-                        <span className={styles.navLink}>WORK WITH ME</span>
+                        <Link href="/about" className={styles.navLink}>ABOUT</Link>
+                        <Link href="/case-studies" className={styles.navLink}>CASE STUDIES</Link>
+                        <Link href="/" className={styles.navLink}>PROJECTS</Link>
+                        <Link href="/impossible-list" className={styles.navLink}>IMPOSSIBLE LIST</Link>
+                        <Link href="/work-with-me" className={styles.navLink}>WORK WITH ME</Link>
                     </nav>
                     <div className={styles.callToAction}>
                         <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />

@@ -35,3 +35,20 @@ export const projectBySlugQuery = groq`*[_type == "project" && slug.current == $
   body,
   link
 }`
+
+export const goalsQuery = groq`*[_type == "goal"] | order(order asc) {
+  _id,
+  title,
+  category,
+  status,
+  completedDate
+}`
+
+export const servicesQuery = groq`*[_type == "services"][0] {
+  _id,
+  title,
+  headline,
+  content,
+  ctaText,
+  ctaLink
+}`

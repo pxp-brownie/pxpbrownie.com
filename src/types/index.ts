@@ -22,3 +22,20 @@ export interface Social {
     platform: string;
     url: string;
 }
+
+export interface Goal {
+    _id: string;
+    title: string;
+    category: string;
+    status: 'pending' | 'in-progress' | 'completed';
+    completedDate?: string;
+}
+
+export interface Services {
+    _id: string;
+    title: string;
+    headline: string;
+    content: any;
+    ctaText: string;
+    ctaLink: string;
+}
