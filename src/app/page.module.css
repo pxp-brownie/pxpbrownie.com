@@ -132,275 +132,260 @@
     overflow: hidden;
 }
 
-.leftSidebar {
-    width: 569px;
-    height: 100%;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+.profileHero {
     display: flex;
+    width: 30rem;
+    max-width: 30rem;
     flex-direction: column;
-    flex-shrink: 0;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
     position: relative;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 100%;
+        max-width: 30rem;
+        margin: 0 auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    .header {
+        position: sticky;
+        top: 0;
+        background-color: var(--color-gray-50);
+        z-index: 50;
+    }
+
+    .mainLayout {
+        flex-direction: column;
+        overflow-y: visible;
+    }
+
+    .profileHero {
+        width: 100%;
+        min-height: calc(100vh - 5.25rem);
+        min-height: calc(100dvh - 5.25rem);
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        flex-shrink: 0;
+    }
+
+    .showcaseGallery {
+        width: 100%;
+        overflow-y: visible;
+        flex: 1;
+    }
 }
 
 .profileTop {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 33px;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
 
+.profileTopRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 0px;
+    width: 100%;
+}
+
 /* Absolute Elements in Left Sidebar */
-.imgCaseyContainer {
-    position: absolute;
-    left: -20px;
-    top: 8px;
-    width: 100px;
-    height: 120px;
-    transform: rotate(15deg);
+.leftImagesComposite {
+    width: 113.415px;
+    height: 87.14px;
+    background: url('/left-composite.png') 50% / contain no-repeat;
 }
 
-.imgCasey {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-.imgGawxContainer {
-    position: absolute;
-    left: 30px;
-    top: 28px;
-    width: 60px;
-    height: 80px;
-}
-
-.imgGawx {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.imgCurryContainer {
-    position: absolute;
-    left: 71px;
-    top: 11px;
-    width: 76px;
-    height: 135px;
-    transform: rotate(-15deg);
-    box-shadow: 0px 0.31px 1.24px rgba(0, 0, 0, 0.6);
-}
-
-.imgCurry {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.imgWarriorsContainer {
-    position: absolute;
-    left: 53px;
-    top: 16px;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    transform: rotate(-15deg);
-    box-shadow: 0px 0.31px 1.24px rgba(0, 0, 0, 0.6);
-    overflow: hidden;
-}
-
-.imgWarriors {
-    width: 175%;
-    height: 128%;
-    object-fit: cover;
-    transform: translate(-37%, -14%);
-}
 
 .textInspiration {
-    position: absolute;
-    left: 200px;
-    top: 19px;
-    font-size: 10px;
-    color: var(--color-green-500);
-    width: 144px;
+    position: relative;
+    color: var(--color-green-500, #31938A);
+    font-family: var(--font-mynerve), cursive, sans-serif;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    /* 0.6875rem */
+    width: 8.99975rem;
+    flex-shrink: 0;
 }
 
-.imgDjangoContainer {
-    position: absolute;
-    left: 407px;
-    top: 8px;
-    width: 63px;
-    height: 94px;
+.rightImagesGroup {
+    position: relative;
+    width: 109.733px;
+    height: 72.278px;
+    flex-shrink: 0;
 }
 
-.imgDjango {
+.rightImagesComposite {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: url('/djangogumpgroup.png') 50% / contain no-repeat;
 }
 
-.imgGumpContainer {
-    position: absolute;
-    left: 451px;
-    top: 16px;
-    width: 68px;
-    height: 104px;
-}
 
-.imgGump {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.imgYesTheoryContainer {
-    position: absolute;
-    left: 498px;
-    top: 7px;
-    width: 80px;
-    height: 80px;
-}
-
-.imgYesTheory {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .bioSection {
-    position: absolute;
-    left: 60px;
-    top: 220px;
-    width: 326px;
+    position: relative;
+    display: flex;
+    padding: 3rem 0.5rem 1.5rem 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.bioInner {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    align-items: flex-start;
+    gap: 3rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.bioTextWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 327px;
+    position: relative;
+    flex-shrink: 0;
 }
 
 .bioTitle {
-    font-family: var(--font-karantina), sans-serif;
-    font-size: 36px;
-    color: var(--color-red-800);
-    text-transform: uppercase;
-    line-height: 0.9;
+    color: var(--color-red-800, #C02927);
+    font-family: "Overused Grotesk", 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+    width: 20.392rem;
+}
+
+.bioTitleBold {
+    font-weight: 700;
+    color: var(--color-red-800, #C02927);
 }
 
 .bioText {
-    font-size: 14px;
-    color: var(--color-gray-600);
-    line-height: 1.5;
+    color: var(--color-gray-600, #707070);
+    font-family: "Overused Grotesk", 'Inter', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 20.392rem;
 }
 
 .bioCTA {
     display: flex;
     align-items: center;
-    gap: 8px;
+    padding: 1.5rem 1rem;
+    gap: 0.5rem;
+    cursor: pointer;
 }
 
 .socialLinks {
     display: flex;
-    gap: 48px;
+    gap: 3rem;
+    align-items: flex-start;
     font-family: var(--font-b612-mono), monospace;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--color-gray-400);
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 1.32px;
 }
 
-.profileImageContainer {
-    position: absolute;
-    left: 435px;
-    top: 228px;
-    width: 100px;
-    height: 100px;
-    border-radius: 9.6px;
-    overflow: hidden;
-}
 
-.profileImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.textThisIsMe {
-    position: absolute;
-    left: 462px;
-    top: 337px;
-    font-size: 10px;
-    color: var(--color-green-500);
-}
 
 .profileFooter {
-    height: 102px;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+    padding: 1rem;
     position: relative;
-    overflow: hidden;
-    border-top: 1px dashed rgba(0, 0, 0, 0.05);
-    /* Just for visual splitting if needed, or remove */
+}
+
+.profileFooterLeft {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profileFooterRight {
+    position: relative;
+    width: 5.38638rem;
+    height: 3.65438rem;
+    flex-shrink: 0;
+}
+
+.imgGroup2Container {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 86.18/58.47;
+    background: url('/5528e7defee6262929a44c069f41377e037dcafe.png') cover no-repeat;
 }
 
 .imgKshipraContainer {
-    position: absolute;
-    left: -20px;
-    top: 19px;
-    width: 120px;
-    height: 80px;
-    transform: rotate(165deg) scaleY(-1);
-}
-
-.imgKshipra {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 99.419px;
+    height: 66.279px;
+    position: relative;
+    flex-shrink: 0;
+    background: url('/kshipra.png') lightgray 50% / cover no-repeat;
 }
 
 .textDesigned {
-    position: absolute;
-    left: 101px;
-    top: 38px;
-    font-size: 10px;
-    color: var(--color-green-500);
+    color: var(--color-green-500, #31938A);
+    font-family: var(--font-mynerve), cursive, sans-serif;
+    font-size: 12.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    /* 1.1 */
+    width: 111.715px;
+    position: relative;
 }
 
-.imgViratContainer {
-    position: absolute;
-    left: 410px;
-    top: 22px;
-    width: 60px;
-    height: 81px;
-}
 
-.imgVirat {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.imgNushratContainer {
-    position: absolute;
-    left: 466px;
-    top: 24px;
-    width: 71px;
-    height: 86px;
-    transform: rotate(15deg);
-}
-
-.imgNushrat {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .textNushrat {
     position: absolute;
-    right: 13px;
-    top: 10px;
-    font-size: 10px;
+    right: 11px;
+    top: 2px;
+    font-size: 12px;
+    font-family: var(--font-mynerve), cursive, sans-serif;
     color: var(--color-green-500);
     text-align: right;
-    width: 88px;
+    width: 88.9px;
+    line-height: 1;
 }
 
 /* Right Content Area */
-.rightContent {
+.showcaseGallery {
     flex: 1;
     padding: 16px;
     overflow-y: auto;
@@ -430,8 +415,8 @@
     border: 2px solid white;
 }
 
-/* Tablet / 1024px Responsiveness */
-@media (max-width: 1024px) {
+/* Responsive Header (1000px Breakpoint) */
+@media (max-width: 1000px) {
     .header {
         padding: 1rem 1.5rem;
     }
@@ -453,13 +438,18 @@
         height: 2.25rem;
     }
 
-    .navLink {
-        padding: 0 0.5rem;
-        width: fit-content;
-        height: auto;
-        white-space: nowrap;
-        line-height: normal;
-        font-size: 0.65rem;
+    .headerLeft {
+        gap: 24px;
+    }
+
+    .menuIcon {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    .navLinks {
+        display: none;
     }
 
     .ctaText {
@@ -473,28 +463,6 @@
     .calendarIcon {
         width: 1.25rem;
         height: 1.25rem;
-    }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .header {
-        padding: 1rem 0.5rem;
-        /* Equivalent to px-[8px] py-[16px] */
-    }
-
-    .headerLeft {
-        gap: 24px;
-    }
-
-    .menuIcon {
-        display: block;
-        width: 24px;
-        height: 24px;
-    }
-
-    .navLinks {
-        display: none;
     }
 }
 

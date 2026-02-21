@@ -40,49 +40,45 @@ export default function Home() {
       {/* Main Layout Area */}
       <main className={styles.mainLayout}>
         {/* Left Sidebar Profile Section */}
-        <aside className={styles.leftSidebar}>
-          <div className={styles.profileTop}>
-
-            <div className={styles.imgCaseyContainer}>
-              <img src="/casey.png" alt="Casey" className={styles.imgCasey} />
-            </div>
-            <div className={styles.imgGawxContainer}>
-              <img src="/gawx.png" alt="Gawx" className={styles.imgGawx} />
-            </div>
-
-            <div className={styles.imgCurryContainer}>
-              <img src="/curry.png" alt="Curry" className={styles.imgCurry} />
-            </div>
-            <div className={styles.imgWarriorsContainer}>
-              <img src="/warriors.png" alt="Warriors" className={styles.imgWarriors} />
-            </div>
-
-            <div className={styles.imgDjangoContainer}>
-              <img src="/django.png" alt="Django" className={styles.imgDjango} />
-            </div>
-            <div className={styles.imgGumpContainer}>
-              <img src="/gump.png" alt="Gump" className={styles.imgGump} />
-            </div>
-            <div className={styles.imgYesTheoryContainer}>
-              <img src="/yestheory.png" alt="Yes Theory" className={styles.imgYesTheory} />
+        <aside className={styles.profileHero}>
+          <div className={styles.profileTopRow}>
+            <div className={styles.leftImagesGroup}>
+              <div className={styles.leftImagesComposite}></div>
             </div>
 
             <div className={styles.textInspiration}>
-              {`some of the things i love and get inspiration from are placed all around the website`}
+              <p>
+                some of the things i love and<br />
+                get inspiration from are placed<br />
+                all around the website{" "}
+                <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'inline-block', verticalAlign: 'middle', transform: 'translateY(-2px)' }}>
+                  <path d="M1 5.5C6 5 12 4.5 19 4M14 1C15.5 2.5 17.5 3.5 21 4.5M14 9C15.5 7.5 17.5 6.5 21 4.5" stroke="#31938a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </p>
             </div>
 
-            <div className={styles.bioSection}>
-              <h2 className={styles.bioTitle}>
-                {`hi i am `}
-                <span style={{ fontFamily: 'var(--font-karantina)' }}>pxp brownie</span>
-                <br /> {`24yo multidisciplinary self taught designer from india  `}
-              </h2>
-              <div className={styles.bioText}>
-                <p>I am a builder driven by the same curiosity that once made me break my toys to see how they worked.</p>
-                <br />
-                <p>Today, I architect digital products and brand identities that bridge the gap between complex systems and human behavior.</p>
-                <br />
-                <p>When I’m not designing, I’m studying ancient Indian architecture, watching the Warriors, or finding the next great book to get lost in.</p>
+            <div className={styles.rightImagesGroup}>
+              <div className={styles.rightImagesComposite}></div>
+            </div>
+          </div>
+
+          <div className={styles.bioSection}>
+            <div className={styles.bioInner}>
+              <div className={styles.bioTextWrapper}>
+                <h2 className={styles.bioTitle}>
+                  hi i am <span className={styles.bioTitleBold}>pxp brownie</span> 24yo
+                  <br />
+                  multidisciplinary self taught
+                  <br />
+                  designer from india
+                </h2>
+                <div className={styles.bioText}>
+                  <p>I am a builder driven by the same curiosity that once made me break my toys to see how they worked.</p>
+                  <br />
+                  <p>Today, I architect digital products and brand identities that bridge the gap between complex systems and human behavior.</p>
+                  <br />
+                  <p>When I’m not designing, I’m studying ancient Indian architecture, watching the Warriors, or finding the next great book to get lost in.</p>
+                </div>
               </div>
               <div className={styles.bioCTA}>
                 <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />
@@ -93,34 +89,25 @@ export default function Home() {
                 <span>twitter</span>
               </div>
             </div>
-
-            <div className={styles.profileImageContainer}>
-              <img src="/me.png" alt="PXP Brownie" className={styles.profileImage} />
-            </div>
-            <div className={styles.textThisIsMe}>this is me</div>
           </div>
 
           <div className={styles.profileFooter}>
-            <div className={styles.imgKshipraContainer}>
-              <img src="/kshipra.png" alt="Kshipra" className={styles.imgKshipra} />
+            <div className={styles.profileFooterLeft}>
+              <div className={styles.imgKshipraContainer}></div>
+              <div className={styles.textDesigned}>
+                Designed by the ghats of kshipra
+              </div>
             </div>
-            <div className={styles.textDesigned}>Designed by the ghats of kshipra</div>
 
-            <div className={styles.imgViratContainer}>
-              <img src="/virat.png" alt="Virat" className={styles.imgVirat} />
+            <div className={styles.profileFooterRight}>
+              <div className={styles.imgGroup2Container}></div>
             </div>
-            <div className={styles.imgNushratContainer}>
-              <img src="/nushratsahab.png" alt="Nushrat" className={styles.imgNushrat} />
-            </div>
-            <div className={styles.textNushrat}>nushrat sahab is the best</div>
           </div>
         </aside>
 
         {/* Right Content Area */}
-        <section className={styles.rightContent}>
+        <section className={styles.showcaseGallery}>
           <div className={styles.scrollArea}>
-            <div className={styles.placeholderCard}></div>
-            <div className={styles.placeholderCard}></div>
           </div>
         </section>
       </main>

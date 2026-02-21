@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Karantina, B612_Mono } from "next/font/google";
+import { Inter, Karantina, B612_Mono, Mynerve } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,6 +12,11 @@ const b612Mono = B612_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: '--font-b612-mono'
+});
+const mynerve = Mynerve({
+  weight: "400",
+  subsets: ["latin"],
+  variable: '--font-mynerve'
 });
 
 export const metadata: Metadata = {
@@ -26,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${karantina.variable} ${b612Mono.variable}`}>
+      <body className={`${inter.className} ${karantina.variable} ${b612Mono.variable} ${mynerve.variable}`}>
         {children}
       </body>
     </html>
