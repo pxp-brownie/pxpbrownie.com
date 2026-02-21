@@ -157,6 +157,7 @@
     .header {
         position: sticky;
         top: 0;
+        height: fit-content;
         background-color: var(--color-gray-50);
         z-index: 50;
         padding: 8px 8px 8px 16px;
@@ -170,17 +171,30 @@
 
     .profileHero {
         width: 100%;
-        min-height: calc(100vh - 5.25rem);
-        min-height: calc(100dvh - 5.25rem);
+        min-height: calc(100vh - 4.5rem);
+        /* Dynamic fallback for viewport filling */
+        min-height: calc(100dvh - 4.5rem);
         border-right: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.10);
         flex-shrink: 0;
+    }
+
+    .bioTitle {
+        font-size: 1.05rem;
+        /* 1.5rem * 0.7 */
+    }
+
+    .bioText {
+        font-size: 0.7rem;
+        /* 1rem * 0.7 */
     }
 
     .showcaseGallery {
         width: 100%;
         overflow-y: visible;
         flex: 1;
+        padding: 1.5rem;
+        /* Increased by 8px (0.5rem) from 1rem/16px */
     }
 }
 
