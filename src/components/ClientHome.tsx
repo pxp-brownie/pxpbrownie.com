@@ -4,6 +4,8 @@ import { useState } from "react";
 import styles from "../app/page.module.css";
 import { Project, Bio, Social } from "../types";
 
+import ProjectCard from "./ProjectCard";
+
 interface ClientHomeProps {
     initialBio: Bio | null;
     initialProjects: Project[];
@@ -14,6 +16,27 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     // Fallback data if CMS is empty or not configured
+    const projects = initialProjects.length > 0 ? initialProjects : [
+        {
+            _id: "preview1",
+            title: "Design System Surf",
+            categories: ["UI/UX", "System Design"],
+            publishedAt: new Date().toISOString(),
+            mainImage: null,
+            slug: "design-system-surf",
+            body: "A meta-tool for design system extraction."
+        },
+        {
+            _id: "preview2",
+            title: "System Forge",
+            categories: ["Product Design"],
+            publishedAt: new Date().toISOString(),
+            mainImage: null,
+            slug: "system-forge",
+            body: "Natural Language AI Command Bar for real-time styling."
+        }
+    ];
+
     const bio = initialBio || {
         title: "hi i am pxp brownie 24yo multidisciplinary self taught designer from india",
         content: "I am a builder driven by the same curiosity that once made me break my toys to see how they worked.\n\nToday, I architect digital products and brand identities that bridge the gap between complex systems and human behavior.\n\nWhen I’m not designing, I’m studying ancient Indian architecture, watching the Warriors, or finding the next great book to get lost in.",
@@ -123,11 +146,9 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
 
                 {/* Right Content Area */}
                 <section className={styles.showcaseGallery}>
-                    <div className={styles.scrollArea}>
-                        {initialProjects.map(project => (
-                            <div key={project._id} className={styles.placeholderCard}>
-                                {project.title}
-                            </div>
+                    <div className={styles.showcaseGrid}>
+                        {projects.map(project => (
+                            <ProjectCard key={project._id} project={project} />
                         ))}
                     </div>
                 </section>
