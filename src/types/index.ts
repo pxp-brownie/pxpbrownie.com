@@ -7,6 +7,7 @@ export interface Project {
     publishedAt: string;
     metric?: string;
     body: string;
+    isCaseStudy?: boolean;
     caseStudyBody?: any;
     link?: string;
 }

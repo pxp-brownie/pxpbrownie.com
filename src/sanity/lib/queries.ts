@@ -9,6 +9,7 @@ export const projectsQuery = groq`*[_type == "project"] | order(publishedAt desc
   publishedAt,
   metric,
   body,
+  isCaseStudy,
   link
 }`
 
@@ -36,6 +37,7 @@ export const projectBySlugQuery = groq`*[_type == "project" && slug.current == $
   metric,
   body,
   caseStudyBody,
+  isCaseStudy,
   link
 }`
 
@@ -48,5 +50,6 @@ export const caseStudiesQuery = groq`*[_type == "project" && isCaseStudy == true
   publishedAt,
   metric,
   body,
+  isCaseStudy,
   link
 }`

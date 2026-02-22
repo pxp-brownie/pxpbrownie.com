@@ -62,10 +62,7 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                     </div>
                 </div>
                 <div className={styles.headerRight}>
-                    <nav className={styles.navLinks}>
-                        <Link href="/case-studies" className={styles.navLink}>CASE STUDIES</Link>
-                        <Link href="/" className={styles.navLink}>PROJECTS</Link>
-                    </nav>
+
                     <div className={styles.callToAction}>
                         <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />
                         <span className={styles.ctaText}>book a call</span>
@@ -144,11 +141,9 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
 
                 {/* Right Content Area */}
                 <section className={styles.showcaseGallery}>
-                    <div className={styles.showcaseGrid}>
-                        {projects.map(project => (
-                            <ProjectCard key={project._id} project={project} />
-                        ))}
-                    </div>
+                    {projects.map(project => (
+                        <ProjectCard key={project._id} project={project} />
+                    ))}
                 </section>
             </main>
 
@@ -159,10 +154,7 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                     <h1 className={styles.mobileMenuLogoText}>PXP BROWNIE</h1>
                 </div>
 
-                <nav className={styles.mobileMenuNavLinks}>
-                    <span className={styles.mobileMenuLink}>CASE STUDIES</span>
-                    <span className={styles.mobileMenuLink}>PROJECTS</span>
-                </nav>
+
 
                 <div className={styles.mobileMenuCallToAction}>
                     <img src="/calendar-mobile.svg" alt="Calendar" className={styles.mobileMenuCalendarIcon} />
