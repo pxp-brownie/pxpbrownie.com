@@ -5,7 +5,9 @@ export interface Project {
     mainImage: any;
     categories: string[];
     publishedAt: string;
+    metric?: string;
     body: string;
+    caseStudyBody?: any;
     link?: string;
 }
 
@@ -21,21 +23,4 @@ export interface Social {
     _id: string;
     platform: string;
     url: string;
-}
-
-export interface Goal {
-    _id: string;
-    title: string;
-    category: string;
-    status: 'pending' | 'in-progress' | 'completed';
-    completedDate?: string;
-}
-
-export interface Services {
-    _id: string;
-    title: string;
-    headline: string;
-    content: any;
-    ctaText: string;
-    ctaLink: string;
 }

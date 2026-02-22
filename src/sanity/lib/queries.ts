@@ -7,6 +7,7 @@ export const projectsQuery = groq`*[_type == "project"] | order(publishedAt desc
   mainImage,
   categories,
   publishedAt,
+  metric,
   body,
   link
 }`
@@ -32,35 +33,10 @@ export const projectBySlugQuery = groq`*[_type == "project" && slug.current == $
   mainImage,
   categories,
   publishedAt,
+  metric,
   body,
+  caseStudyBody,
   link
-}`
-
-export const goalsQuery = groq`*[_type == "goal"] | order(order asc) {
-  _id,
-  title,
-  category,
-  status,
-  completedDate
-}`
-
-export const servicesQuery = groq`*[_type == "services"][0] {
-  _id,
-  title,
-  headline,
-  content,
-  ctaText,
-  ctaLink
-}`
-
-export const aboutQuery = groq`*[_type == "about"][0] {
-  _id,
-  title,
-  headline,
-  mainImage,
-  story,
-  skills,
-  experience
 }`
 
 export const caseStudiesQuery = groq`*[_type == "project" && isCaseStudy == true] | order(publishedAt desc) {
@@ -70,6 +46,7 @@ export const caseStudiesQuery = groq`*[_type == "project" && isCaseStudy == true
   mainImage,
   categories,
   publishedAt,
+  metric,
   body,
   link
 }`

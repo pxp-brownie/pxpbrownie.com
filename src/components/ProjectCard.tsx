@@ -24,23 +24,25 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 ) : (
                     <div className={styles.projectImagePlaceholder}></div>
                 )}
-                <div className={styles.projectOverlay}>
-                    <div className={styles.projectTags}>
-                        {project.categories?.map((category, index) => (
-                            <span key={index} className={styles.projectTag}>{category}</span>
-                        ))}
-                    </div>
-                    <div className={styles.projectHeader}>
-                        <h3 className={styles.projectTitle}>{project.title}</h3>
-                        {project.link && (
-                            <div className={styles.projectLink}>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                        )}
-                    </div>
-                </div>
+            </div>
+            <div className={styles.projectDetails}>
+                <h3 className={styles.projectTitleRow}>
+                    <span className={styles.projectTitle}>{project.title}</span>
+                    {project.categories?.length > 0 && (
+                        <>
+                            <span className={styles.projectDot}>•</span>
+                            <span className={styles.projectCategories}>
+                                {project.categories.join(' • ').toUpperCase()}
+                            </span>
+                        </>
+                    )}
+                    {project.metric && (
+                        <>
+                            <span className={styles.projectDot}>•</span>
+                            <span className={styles.projectMetric}>{project.metric}</span>
+                        </>
+                    )}
+                </h3>
             </div>
         </Link>
     );

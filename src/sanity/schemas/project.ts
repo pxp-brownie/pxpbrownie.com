@@ -58,8 +58,17 @@ export default defineType({
             name: 'caseStudyBody',
             title: 'Case Study Body',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [
+                { type: 'block' },
+                { type: 'image' }
+            ],
             hidden: ({ document }) => !document?.isCaseStudy,
+        }),
+        defineField({
+            name: 'metric',
+            title: 'Metric',
+            description: 'Optional highlight string for the project card (e.g., "$72M RAISED")',
+            type: 'string',
         }),
     ],
 })

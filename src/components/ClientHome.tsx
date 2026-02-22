@@ -63,11 +63,8 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                 </div>
                 <div className={styles.headerRight}>
                     <nav className={styles.navLinks}>
-                        <Link href="/about" className={styles.navLink}>ABOUT</Link>
                         <Link href="/case-studies" className={styles.navLink}>CASE STUDIES</Link>
                         <Link href="/" className={styles.navLink}>PROJECTS</Link>
-                        <Link href="/impossible-list" className={styles.navLink}>IMPOSSIBLE LIST</Link>
-                        <Link href="/work-with-me" className={styles.navLink}>WORK WITH ME</Link>
                     </nav>
                     <div className={styles.callToAction}>
                         <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />
@@ -163,11 +160,8 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                 </div>
 
                 <nav className={styles.mobileMenuNavLinks}>
-                    <span className={styles.mobileMenuLink}>ABOUT</span>
                     <span className={styles.mobileMenuLink}>CASE STUDIES</span>
                     <span className={styles.mobileMenuLink}>PROJECTS</span>
-                    <span className={styles.mobileMenuLink}>IMPOSSIBLE LIST</span>
-                    <span className={styles.mobileMenuLink}>WORK WITH ME</span>
                 </nav>
 
                 <div className={styles.mobileMenuCallToAction}>
