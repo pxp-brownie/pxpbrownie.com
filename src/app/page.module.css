@@ -356,7 +356,7 @@
     color: var(--color-gray-600, #707070);
     font-family: "Overused Grotesk", 'Inter', sans-serif;
     font-size: clamp(14px, 1vw, 16px);
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.5;
     white-space: pre-wrap;
     width: 100%;
