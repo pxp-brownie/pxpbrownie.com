@@ -26,7 +26,7 @@ export default async function CaseStudiesPage() {
                     </h1>
                 </div>
                 <div className={styles.headerRight}>
-                    <div className={styles.callToAction}>
+                    <div className={styles.callToAction} data-cal-link="pxpbrownie" data-cal-config='{"layout":"month_view"}'>
                         <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />
                         <span className={styles.ctaText}>book a call</span>
                     </div>

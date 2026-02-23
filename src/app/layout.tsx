@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Karantina, B612_Mono, Mynerve } from "next/font/google";
 import "./globals.css";
+import CalEmbed from "@/components/CalEmbed";
 
 const inter = Inter({ subsets: ["latin"] });
 const karantina = Karantina({
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} ${karantina.variable} ${b612Mono.variable} ${mynerve.variable}`}>
         {children}
+        <CalEmbed />
       </body>
     </html>
   );

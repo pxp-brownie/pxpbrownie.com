@@ -12,7 +12,8 @@ interface ProjectPageProps {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-    const project = await getProjectBySlug(params.slug);
+    const { slug } = await params;
+    const project = await getProjectBySlug(slug);
 
     if (!project) {
         notFound();
@@ -39,7 +40,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     </h1>
                 </div>
                 <div className={styles.headerRight}>
-                    <div className={styles.callToAction}>
+                    <div className={styles.callToAction} data-cal-link="pxpbrownie" data-cal-config='{"layout":"month_view"}'>
                         <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />
                         <span className={styles.ctaText}>book a call</span>
                     </div>
@@ -55,6 +56,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         <div className={styles.detailHeroText}>
                             <h1 className={styles.detailTitle}>{project.title}</h1>
                             <div className={styles.detailTags}>
+                                {project.metric && (
+                                    <span className={styles.detailTag} style={{ borderColor: 'var(--color-red-600)', color: 'var(--color-red-800)' }}>
+                                        {project.metric}
+                                    </span>
+                                )}
                                 {project.categories?.map((tag: string, i: number) => (
                                     <span key={i} className={styles.detailTag}>{tag}</span>
                                 ))}
@@ -63,7 +69,32 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     </div>
 
                     <div className={styles.projectBody}>
-                        <PortableText value={project.body} />
+                        {project.isCaseStudy && project.caseStudyBody ? (
+                            <PortableText
+                                value={project.caseStudyBody}
+                                components={{
+                                    types: {
+                                        image: ({ value }: any) => {
+                                            if (!value?.asset?._ref) {
+                                                return null;
+                                            }
+                                            return (
+                                                <figure>
+                                                    <img
+                                                        src={urlForImage(value).fit('max').auto('format').url()}
+                                                        alt={value.alt || 'Project screenshot'}
+                                                        loading="lazy"
+                                                    />
+                                                    {value.caption && <figcaption>{value.caption}</figcaption>}
+                                                </figure>
+                                            )
+                                        }
+                                    }
+                                }}
+                            />
+                        ) : (
+                            <PortableText value={project.body} />
+                        )}
                     </div>
 
                     {project.link && (

@@ -102,7 +102,7 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                                 ))}
                             </div>
 
-                            <div className={styles.heroSolidCta}>
+                            <div className={styles.heroSolidCta} data-cal-link="pxpbrownie" data-cal-config='{"layout":"month_view"}'>
                                 <img src="/figma_assets/ae2b27930ffc73d40646637e0766642b0d1130af.svg" alt="Calendar" className={styles.heroCalendarIcon} />
                                 <span className={styles.heroCtaText}>BOOK A CALL</span>
                             </div>
@@ -110,13 +110,15 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                             <div className={styles.heroSocialLinks}>
                                 {initialSocials.length > 0 ? (
                                     initialSocials.map(social => (
-                                        <span key={social._id}>{social.platform}</span>
+                                        <a href={social.url} target="_blank" rel="noopener noreferrer" key={social._id} className={styles.socialLink}>
+                                            {social.platform}
+                                        </a>
                                     ))
                                 ) : (
                                     <>
-                                        <span>linkedin</span>
-                                        <span>twitter</span>
-                                        <span>resume</span>
+                                        <span className={styles.socialLink}>linkedin</span>
+                                        <span className={styles.socialLink}>twitter</span>
+                                        <span className={styles.socialLink}>resume</span>
                                     </>
                                 )}
                             </div>
