@@ -47,70 +47,67 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
 
     return (
         <div className={styles.container}>
-            {/* Header */}
-            <header className={styles.header}>
-                <div className={styles.headerLeft}>
-                    <button className={styles.menuIcon} onClick={() => setIsMobileMenuOpen(true)}>
-                        <img src="/menu.svg" alt="Menu" />
-                    </button>
-                    <div className={styles.logoContainer}>
-                        <img src="/vector8.svg" alt="Logo Icon" className={styles.logoIcon} />
-                        <h1 className={styles.logoText}>
-                            <span>PXP</span>
-                            <span className={styles.logoTextDesktop}>BROWNIE</span>
-                        </h1>
-                    </div>
-                </div>
-                <div className={styles.headerRight}>
-
-                    <div className={styles.callToAction}>
-                        <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />
-                        <span className={styles.ctaText}>book a call</span>
-                    </div>
-                </div>
-            </header>
-
             {/* Main Layout Area */}
             <main className={styles.mainLayout}>
                 {/* Left Sidebar Profile Section */}
                 <aside className={styles.profileHero}>
-                    <div className={styles.profileTopRow}>
-                        <div className={styles.leftImagesGroup}>
-                            <div className={styles.leftImagesComposite}></div>
+                    <div className={styles.heroTopRow}>
+                        <div className={styles.heroImagesCluster}>
+                            <div className={styles.imgCasey}>
+                                <img src="/figma_assets/d20992b369a5e899c24d9f9fd54fbe9e6b20aae7.png" alt="Casey" />
+                            </div>
+                            <div className={styles.imgGawx}>
+                                <img src="/figma_assets/952b6181af3cc1b4031a46d48e213914edf45ccb.png" alt="Gawx" />
+                            </div>
+                            <div className={styles.imgCurryWarriors}>
+                                <div className={styles.imgCurry}>
+                                    <img src="/figma_assets/5510af947400455909c5d1f9b72f7a374b3705b9.png" alt="Curry" />
+                                </div>
+                                <div className={styles.imgWarriors}>
+                                    <img src="/figma_assets/3aa16c30d77c1ef0f226392dd83f527b52653903.png" alt="Warriors" />
+                                </div>
+                            </div>
                         </div>
 
-                        <div className={styles.textInspiration}>
+                        <div className={styles.heroInspirationText}>
                             <p>
-                                some of the things i love and<br />
-                                get inspiration from are placed<br />
-                                all around the website{" "}
-                                <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'inline-block', verticalAlign: 'middle', transform: 'translateY(-2px)' }}>
-                                    <path d="M1 5.5C6 5 12 4.5 19 4M14 1C15.5 2.5 17.5 3.5 21 4.5M14 9C15.5 7.5 17.5 6.5 21 4.5" stroke="#31938a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                some of the things i love and
+                                get inspiration from are placed
+                                all around the website
                             </p>
                         </div>
 
-                        <div className={styles.rightImagesGroup}>
-                            <div className={styles.rightImagesComposite}></div>
+                        <div className={styles.heroGroup31}>
+                            <img src="/figma_assets/12df6d2dc5b76ab953a48e1b1b856e4cb7af9919.png" alt="Design Collage" />
                         </div>
                     </div>
 
-                    <div className={styles.bioSection}>
-                        <div className={styles.bioInner}>
-                            <div className={styles.bioTextWrapper}>
-                                <h2 className={styles.bioTitle} dangerouslySetInnerHTML={{ __html: bio.title.replace('pxp brownie', '<span class="' + styles.bioTitleBold + '">pxp brownie</span>').replace('\n', '<br/>') }}>
-                                </h2>
-                                <div className={styles.bioText}>
-                                    {bio.content.split('\n\n').map((para, i) => (
-                                        <p key={i}>{para}</p>
-                                    ))}
+                    <div className={styles.heroBioSection}>
+                        <div className={styles.heroBioInner}>
+
+                            <div className={styles.heroBioTitleRow}>
+                                <div>
+                                    hi i am
+                                    <div className={styles.heroPxpbrownieStamp}>
+                                        <img src="/figma_assets/pxpbrownie.svg" alt="PXP Brownie Stamp" />
+                                    </div>
+                                    24yo
                                 </div>
+                                <div>multidisciplinary self taught designer from india</div>
                             </div>
-                            <div className={styles.bioCTA}>
-                                <img src="/calendar.svg" alt="Calendar" className={styles.calendarIcon} />
-                                <span className={styles.ctaText}>{bio.ctaText}</span>
+
+                            <div className={styles.heroBioDescription}>
+                                {bio.content.split('\n\n').map((para, i) => (
+                                    <p key={i}>{para}</p>
+                                ))}
                             </div>
-                            <div className={styles.socialLinks}>
+
+                            <div className={styles.heroSolidCta}>
+                                <img src="/figma_assets/ae2b27930ffc73d40646637e0766642b0d1130af.svg" alt="Calendar" className={styles.heroCalendarIcon} />
+                                <span className={styles.heroCtaText}>BOOK A CALL</span>
+                            </div>
+
+                            <div className={styles.heroSocialLinks}>
                                 {initialSocials.length > 0 ? (
                                     initialSocials.map(social => (
                                         <span key={social._id}>{social.platform}</span>
@@ -119,22 +116,20 @@ export default function ClientHome({ initialBio, initialProjects, initialSocials
                                     <>
                                         <span>linkedin</span>
                                         <span>twitter</span>
+                                        <span>resume</span>
                                     </>
                                 )}
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.profileFooter}>
-                        <div className={styles.profileFooterLeft}>
-                            <div className={styles.imgKshipraContainer}></div>
-                            <div className={styles.textDesigned}>
+                    <div className={styles.heroFooter}>
+                        <div className={styles.heroFooterContent}>
+                            <div className={styles.heroStamp1}>
+                            </div>
+                            <div className={styles.heroFooterText}>
                                 Designed by the ghats of kshipra
                             </div>
-                        </div>
-
-                        <div className={styles.profileFooterRight}>
-                            <div className={styles.imgGroup2Container}></div>
                         </div>
                     </div>
                 </aside>
