@@ -318,7 +318,8 @@
     flex-direction: column;
     align-items: flex-start;
     gap: clamp(24px, 4vh, 48px);
-    width: clamp(300px, 70%, 800px);
+    width: clamp(300px, 80%, 800px);
+    /* adjusted to 80% for better mobile fill, capped at 800px for desktop */
     position: relative;
 }
 
@@ -355,7 +356,8 @@
 .heroBioDescription {
     color: var(--color-gray-600, #707070);
     font-family: "Overused Grotesk", 'Inter', sans-serif;
-    font-size: clamp(14px, 1vw, 16px);
+    font-size: clamp(12px, 1.5vw, 16px);
+    /* Scaled down mobile text to 12px */
     font-weight: 300;
     line-height: 1.5;
     white-space: pre-wrap;
@@ -374,7 +376,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: clamp(12px, 2vh, 16px) clamp(24px, 4vw, 32px);
+    padding: clamp(9px, 2vh, 16px) clamp(18px, 4vw, 32px);
+    /* shrunk 25% on mobile */
     background-color: var(--color-blue-900, #074f56);
     cursor: pointer;
     transition: transform 0.2s ease, opacity 0.2s ease;
@@ -386,15 +389,17 @@
 }
 
 .heroCalendarIcon {
-    width: 24px;
-    height: 24px;
+    width: clamp(18px, 3vw, 24px);
+    /* shrunk 25% on mobile */
+    height: clamp(18px, 3vw, 24px);
     color: white;
 }
 
 .heroCtaText {
     color: var(--color-gray-50, #f9f9f9);
     font-family: var(--font-karantina), 'Karantina', sans-serif;
-    font-size: clamp(20px, 1.5vw, 24px);
+    font-size: clamp(15px, 1.5vw, 24px);
+    /* shrunk 25% on mobile */
     text-transform: uppercase;
     line-height: normal;
 }
@@ -512,7 +517,7 @@
     width: 100%;
     padding: 1rem 2rem;
     font-family: var(--font-b612-mono), monospace;
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
