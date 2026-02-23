@@ -146,208 +146,307 @@
     display: flex;
     width: 30rem;
     max-width: 30rem;
+    height: 100vh;
+    height: 100dvh;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     flex: 1 0 0;
     align-self: stretch;
     border-right: 1px solid rgba(0, 0, 0, 0.10);
     position: relative;
     background-color: var(--color-gray-50);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.profileTop {
-    flex: 1;
+.heroTopRow {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 33px;
+    justify-content: space-between;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    padding: 0;
 }
 
-.profileTopRow {
+.heroImagesCluster {
+    display: inline-grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    position: relative;
+    line-height: 0;
+}
+
+.imgCasey {
     display: flex;
-    justify-content: space-between;
+    width: 39.82px;
+    height: 55.15px;
+    margin-left: 0;
+    margin-top: 4.23px;
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    transform: rotate(15deg);
     align-items: center;
-    align-self: stretch;
+    justify-content: center;
+}
+
+.imgCasey img {
+    position: absolute;
+    width: 207.49%;
+    height: 100%;
+    max-width: none;
+    left: -53.74%;
+    top: 0;
+}
+
+.imgGawx {
+    width: 31.541px;
+    height: 42.485px;
+    margin-left: 34.37px;
+    margin-top: 15.01px;
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.imgGawx img {
+    position: absolute;
+    width: 139.88%;
+    height: 129.81%;
+    max-width: none;
+    left: -19.94%;
+    top: -14.91%;
+}
+
+.imgCurryWarriors {
+    display: inline-grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    width: 66.921px;
+    height: 87.14px;
+    margin-left: 46.49px;
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.imgCurry {
+    width: 39.997px;
+    height: 71.106px;
+    margin-left: 7.88px;
+    margin-top: 5.96px;
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    box-shadow: 0px 0.164px 0.654px 0px rgba(0, 0, 0, 0.6);
+    transform: rotate(-15.68deg);
+}
+
+.imgCurry img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgWarriors {
+    width: 15.756px;
+    height: 15.717px;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    box-shadow: 0px 0.164px 0.654px 0px rgba(0, 0, 0, 0.6);
+    border-radius: 7.858px;
+    transform: rotate(-15.68deg);
+}
+
+.imgWarriors img {
+    position: absolute;
+    width: 175.96%;
+    height: 128.92%;
+    max-width: none;
+    left: -37.93%;
+    top: -14.34%;
+}
+
+.heroInspirationText {
+    color: var(--color-green-500, #31938A);
+    font-family: var(--font-mynerve), cursive, sans-serif;
+    font-size: clamp(10px, 0.8vw, 12.5px);
+    font-weight: 400;
+    line-height: 1.1;
+    width: clamp(100px, 12vw, 150px);
+    max-width: 30%;
+    white-space: pre-wrap;
     position: relative;
     flex-shrink: 0;
-    margin-top: 0px;
-    width: 100%;
 }
 
-/* Image Clusters */
-.leftImagesComposite {
-    width: 113.415px;
-    height: 87.14px;
-    background: url('/left-composite.png') 50% / contain no-repeat;
+.heroInspirationText p {
+    margin: 0;
 }
 
-.rightImagesGroup {
-    position: relative;
+.heroGroup31 {
     width: 109.733px;
     height: 72.278px;
+    position: relative;
     flex-shrink: 0;
 }
 
-.rightImagesComposite {
+.heroGroup31 img {
     width: 100%;
     height: 100%;
-    background: url('/djangogumpgroup.png') 50% / contain no-repeat;
+    object-fit: cover;
 }
 
-.textInspiration {
-    position: relative;
-    color: var(--color-green-500, #31938A);
-    font-family: var(--font-mynerve), cursive, sans-serif;
-    font-size: 0.625rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 110%;
-    width: 8.99975rem;
-    flex-shrink: 0;
-}
-
-/* Bio Section */
-.bioSection {
-    position: relative;
+/* Hero Bio Section */
+.heroBioSection {
     display: flex;
-    padding: 3rem 0.5rem 1.5rem 0.5rem;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 3rem;
+    justify-content: center;
+    padding: clamp(24px, 4vh, 48px) clamp(16px, 2vw, 32px) clamp(16px, 2vh, 24px);
+    width: 100%;
     flex: 1 0 0;
-    align-self: stretch;
+    position: relative;
 }
 
-.bioInner {
+.heroBioInner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3rem;
+    gap: clamp(24px, 4vh, 48px);
+    width: clamp(300px, 75%, 800px);
     position: relative;
-    flex-shrink: 0;
 }
 
-.bioTextWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 327px;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.bioTitle {
-    color: var(--color-red-800, #C02927);
+.heroBioTitleRow {
+    color: var(--color-red-600, #df3a34);
     font-family: "Overused Grotesk", 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 100%;
-    width: 20.392rem;
+    font-size: clamp(18px, 1.5vw, 24px);
+    font-weight: 400;
+    line-height: 1.2;
+    position: relative;
 }
 
-.bioTitleBold {
-    font-weight: 700;
-    color: var(--color-red-800, #C02927);
+.heroPxpbrownieStamp {
+    display: inline-block;
+    position: relative;
+    vertical-align: baseline;
+    width: clamp(120px, 12vw, 156px);
+    height: 0;
+    margin: 0 clamp(8px, 1vw, 12px);
 }
 
-.bioText {
+.heroPxpbrownieStamp img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -0.5em;
+    /* Drops the origin to align with the topline of the text below */
+    left: 0;
+    transform-origin: bottom right;
+    transform: rotate(4.43deg);
+    pointer-events: none;
+}
+
+.heroBioDescription {
     color: var(--color-gray-600, #707070);
     font-family: "Overused Grotesk", 'Inter', sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    width: 20.392rem;
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 100;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    width: 100%;
 }
 
-.bioCTA {
+.heroBioDescription p {
+    margin-bottom: clamp(12px, 1.5vh, 16px);
+}
+
+.heroBioDescription p:last-child {
+    margin-bottom: 0;
+}
+
+.heroSolidCta {
     display: flex;
     align-items: center;
-    padding: 1.5rem 0rem;
-    gap: 0.5rem;
+    gap: 8px;
+    padding: clamp(12px, 2vh, 16px) clamp(24px, 4vw, 32px);
+    background-color: var(--color-blue-900, #074f56);
     cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.socialLinks {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-    font-family: var(--font-b612-mono), monospace;
-    font-size: 0.75rem;
-    color: var(--color-gray-400);
+.heroSolidCta:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.heroCalendarIcon {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.heroCtaText {
+    color: var(--color-gray-50, #f9f9f9);
+    font-family: var(--font-karantina), 'Karantina', sans-serif;
+    font-size: clamp(20px, 1.5vw, 24px);
     text-transform: uppercase;
+    line-height: normal;
+}
+
+.heroSocialLinks {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Safety wrap for tiny screens */
+    gap: clamp(24px, 3vw, 48px);
+    font-family: "Overused Grotesk", 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--color-gray-400, #b8b8b8);
     text-align: center;
+    text-transform: uppercase;
     letter-spacing: 1.32px;
+    line-height: 0.78;
 }
 
-/* Footer Section */
-.profileFooter {
+/* Hero Footer Section */
+.heroFooter {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-end;
-    align-self: stretch;
-    padding: 1rem;
-    position: relative;
+    padding: clamp(12px, 2vh, 16px) clamp(16px, 2vw, 32px) clamp(16px, 3vh, 24px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-.profileFooterLeft {
+.heroFooterContent {
     display: flex;
-    gap: 11px;
     align-items: center;
     justify-content: center;
-    position: relative;
-    flex-shrink: 0;
+    gap: clamp(8px, 1vw, 12px);
+    flex-wrap: wrap;
 }
 
-.imgKshipraContainer {
-    width: 99.419px;
-    height: 66.279px;
-    position: relative;
-    flex-shrink: 0;
-    background: url('/kshipra.png') lightgray 50% / cover no-repeat;
+.heroStamp1 {
+    width: clamp(40px, 4vw, 60px);
+    padding: 4px;
+    aspect-ratio: 236 / 224;
+    background: url('/figma_assets/a2c4bcdd2d99e6be609508a75c44899ec5ee8384.png') lightgray 50% / cover no-repeat;
 }
 
-.textDesigned {
-    color: var(--color-green-500, #31938A);
+.heroFooterText {
+    color: var(--color-green-500, #31938a);
     font-family: var(--font-mynerve), cursive, sans-serif;
-    font-size: 12.5px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 110%;
-    width: 111.715px;
-    position: relative;
-}
-
-.profileFooterRight {
-    position: relative;
-    width: 5.38638rem;
-    height: 3.65438rem;
-    flex-shrink: 0;
-}
-
-.imgGroup2Container {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 86.18/58.47;
-    background: url('/5528e7defee6262929a44c069f41377e037dcafe.png') center / contain no-repeat;
-}
-
-.textNushrat {
-    position: absolute;
-    right: 11px;
-    top: 2px;
-    font-size: 12px;
-    font-family: var(--font-mynerve), cursive, sans-serif;
-    color: var(--color-green-500);
-    text-align: right;
-    width: 88.9px;
-    line-height: 1;
+    font-size: clamp(10px, 1vw, 12.5px);
+    line-height: 1.1;
+    white-space: pre-wrap;
+    max-width: clamp(90px, 8vw, 115px);
+    width: auto;
 }
 
 /* ==========================================================================
@@ -798,16 +897,20 @@
     .mainLayout {
         flex-direction: column;
         overflow-y: visible;
-        height: fill-available;
+        height: auto;
+        min-height: 100vh;
     }
 
     .profileHero {
         width: 100%;
-        min-height: calc(100vh - 4.5rem);
-        min-height: calc(100dvh - 4.5rem);
+        max-width: 100%;
+        height: 100vh;
+        height: 100dvh;
         border-right: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.10);
         flex-shrink: 0;
+        flex: none;
+        /* Prevent flex parent from shrinking or growing it */
     }
 
     .bioTitle {
@@ -818,10 +921,6 @@
     .bioText {
         font-size: 0.7rem;
         /* 1rem * 0.7 */
-    }
-
-    .mainLayout {
-        height: fit-content;
     }
 
     .showcaseGallery {
